@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- DB Connection Details -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/hibernate</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- MySql Dialect - Not required for Hibernate-4.x -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!--Display sql script during execution -->
+		<property name="show_sql">1</property>
+
+		<!-- create table dynamically -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- Mapping Classes -->
+		<mapping class="jbr.hibernate.annotation.model.User" />
+		<mapping class="jbr.hibernate.annotation.model.Book" />
+	</session-factory>
+</hibernate-configuration>

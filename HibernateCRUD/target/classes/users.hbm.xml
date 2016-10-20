@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="jbr.hibernate.model.User" table="USERS">
+
+		<id column="ID" name="id" type="int">
+			<generator class="increment" />
+		</id>
+
+		<property name="username" type="java.lang.String" column="USERNAME" />
+		<property name="password" type="java.lang.String" column="PASSWORD" />
+		<property name="firstname" type="java.lang.String" column="FIRSTNAME" />
+		<property name="lastname" type="java.lang.String" column="LASTNAME" />
+		<property name="address" type="java.lang.String" column="ADDRESS" />
+		<property name="phone" type="long" column="PHONE" />
+	</class>
+</hibernate-mapping>
